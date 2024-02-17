@@ -24,10 +24,10 @@ public class AppApplication {
 @RestController
 class AppController {
 
-	@GetMapping("/")
-	ResponseEntity<?> getData() throws UnknownHostException {
-		InetAddress inet4Address = Inet4Address.getLocalHost();
-		return ResponseEntity.ok(Map.of("message", "Welcome from - " + inet4Address.getHostAddress() + " - " + inet4Address.getHostName()));
-	}
+    @GetMapping("/")
+    ResponseEntity<?> getData() throws UnknownHostException {
+        InetAddress inet4Address = Inet4Address.getLocalHost();
+        return ResponseEntity.ok(Map.of("message", "Welcome from V2 - " + inet4Address.getHostAddress() + " - " + inet4Address.getHostName()));
+    }
 
 }
